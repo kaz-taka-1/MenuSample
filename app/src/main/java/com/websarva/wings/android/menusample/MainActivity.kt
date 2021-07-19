@@ -27,24 +27,6 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_options_menu_list,menu)
         return true
     }
-    private fun createCurryList():MutableList<MutableMap<String,Any>>{
-        val menuList:MutableList<MutableMap<String,Any>> = mutableListOf()
-        var menu =mutableMapOf<String,Any>("name" to "ビーフカレー","price" to 520,"desc" to "特製スパイスをきかせた国産ビーフ100％のカレーです。")
-        menuList.add(menu)
-        menu = mutableMapOf<String,Any>("name" to "ポークカレー","price" to 420,"desc" to "特製スパイスをきかせた国産ポーク100％のカレーです。")
-        menuList.add(menu)
-        menu = mutableMapOf("name" to "ハンバーグカレー", "price" to 620, "desc" to "特選スパイスをきかせたカレーに手ごねハンバーグをトッピングです。")
-        menuList.add(menu)
-        menu = mutableMapOf("name" to "チーズカレー", "price" to 560, "desc" to "特選スパイスをきかせたカレーにとろけるチーズをトッピングです。")
-        menuList.add(menu)
-        menu = mutableMapOf("name" to "カツカレー", "price" to 760, "desc" to "特選スパイスをきかせたカレーに国産ロースカツをトッピングです。")
-        menuList.add(menu)
-        menu = mutableMapOf("name" to "ビーフカツカレー", "price" to 880, "desc" to "特選スパイスをきかせたカレーに国産ビーフカツをトッピングです。")
-        menuList.add(menu)
-        menu = mutableMapOf("name" to "からあげカレー", "price" to 540, "desc" to "特選スパイスをきかせたカレーに若鳥のから揚げをトッピングです。")
-        menuList.add(menu)
-        return menuList
-    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         var returnVal = true
@@ -102,6 +84,24 @@ class MainActivity : AppCompatActivity() {
         menu = mutableMapOf("name" to "焼き魚定食", "price" to 850, "desc" to "鰆の塩焼きにサラダ、ご飯とお味噌汁が付きます。")
         menuList.add(menu)
         menu = mutableMapOf("name" to "焼肉定食", "price" to 950, "desc" to "特性たれの焼肉にサラダ、ご飯とお味噌汁が付きます。")
+        menuList.add(menu)
+        return menuList
+    }
+    private fun createCurryList():MutableList<MutableMap<String,Any>>{
+        val menuList:MutableList<MutableMap<String,Any>> = mutableListOf()
+        var menu =mutableMapOf<String,Any>("name" to "ビーフカレー","price" to 520,"desc" to "特製スパイスをきかせた国産ビーフ100％のカレーです。")
+        menuList.add(menu)
+        menu = mutableMapOf<String,Any>("name" to "ポークカレー","price" to 420,"desc" to "特製スパイスをきかせた国産ポーク100％のカレーです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "ハンバーグカレー", "price" to 620, "desc" to "特選スパイスをきかせたカレーに手ごねハンバーグをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "チーズカレー", "price" to 560, "desc" to "特選スパイスをきかせたカレーにとろけるチーズをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "カツカレー", "price" to 760, "desc" to "特選スパイスをきかせたカレーに国産ロースカツをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "ビーフカツカレー", "price" to 880, "desc" to "特選スパイスをきかせたカレーに国産ビーフカツをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "からあげカレー", "price" to 540, "desc" to "特選スパイスをきかせたカレーに若鳥のから揚げをトッピングです。")
         menuList.add(menu)
         return menuList
     }
