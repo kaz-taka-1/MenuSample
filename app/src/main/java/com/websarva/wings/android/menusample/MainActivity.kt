@@ -26,6 +26,24 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_options_menu_list,menu)
         return true
     }
+    private fun createCurryList():MutableList<MutableMap<String,Any>>{
+        val menuList:MutableList<MutableMap<String,Any>> = mutableListOf()
+        var menu =mutableMapOf<String,Any>("name" to "ビーフカレー","price" to 520,"desc" to "特製スパイスをきかせた国産ビーフ100％のカレーです。")
+        menuList.add(menu)
+        menu = mutableMapOf<String,Any>("name" to "ポークカレー","price" to 420,"desc" to "特製スパイスをきかせた国産ポーク100％のカレーです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "ハンバーグカレー", "price" to 620, "desc" to "特選スパイスをきかせたカレーに手ごねハンバーグをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "チーズカレー", "price" to 560, "desc" to "特選スパイスをきかせたカレーにとろけるチーズをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "カツカレー", "price" to 760, "desc" to "特選スパイスをきかせたカレーに国産ロースカツをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "ビーフカツカレー", "price" to 880, "desc" to "特選スパイスをきかせたカレーに国産ビーフカツをトッピングです。")
+        menuList.add(menu)
+        menu = mutableMapOf("name" to "からあげカレー", "price" to 540, "desc" to "特選スパイスをきかせたカレーに若鳥のから揚げをトッピングです。")
+        menuList.add(menu)
+        return menuList
+    }
 
     private inner class ListItemClickListener : AdapterView.OnItemClickListener{
         override fun onItemClick(parent: AdapterView<*>, view: View, position:Int, id:Long){
