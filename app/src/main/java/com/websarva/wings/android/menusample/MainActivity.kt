@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
@@ -43,6 +44,19 @@ class MainActivity : AppCompatActivity() {
         menu = mutableMapOf("name" to "からあげカレー", "price" to 540, "desc" to "特選スパイスをきかせたカレーに若鳥のから揚げをトッピングです。")
         menuList.add(menu)
         return menuList
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var returnVal = true
+        when (item.itemId){
+            R.id.menuListOptionTeishoku ->_menuList = createTeishokuList()
+            R.id.menuListOptionsCurry ->_menuList = createCurryList()
+            else -> returnVal = super.onOptionsItemSelected(item)
+        }
+        val lvMenu = findViewById<ListView>(R.id.lvMenu)
+        val adapter = SimpleAdapter(this@MainActivity,_menuList,R.layout.row,_from,_to)
+        lvMenu.adapter = adapter
+        return returnVal
     }
 
     private inner class ListItemClickListener : AdapterView.OnItemClickListener{
